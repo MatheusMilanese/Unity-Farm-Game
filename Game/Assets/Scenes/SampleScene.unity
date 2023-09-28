@@ -33653,6 +33653,27 @@ MonoBehaviour:
   m_CropFrameX: 0
   m_CropFrameY: 0
   m_StretchFill: 0
+--- !u!1 &551517173 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3542931577100522755, guid: 84d9f3331f2a721489d16348ca1489f4, type: 3}
+  m_PrefabInstance: {fileID: 3542931577184271801}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &551517174
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 551517173}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 971f047b6215fd444bf1d4b3f105c6d0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dialogueRange: 1
+  playerMask:
+    serializedVersion: 2
+    m_Bits: 64
 --- !u!1 &583806913
 GameObject:
   m_ObjectHideFlags: 0
@@ -33668,7 +33689,7 @@ GameObject:
   - component: {fileID: 583806919}
   - component: {fileID: 583806918}
   - component: {fileID: 583806920}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Player
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -33709,7 +33730,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.0118021965, y: -0.00000011920929}
+  m_Offset: {x: 0.0118021965, y: -0.19709897}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -33720,7 +33741,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.73621416, y: 0.83461165}
+  m_Size: {x: 0.73621416, y: 0.44041395}
   m_EdgeRadius: 0
 --- !u!212 &583806916
 SpriteRenderer:
@@ -33762,7 +33783,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 1
   m_Sprite: {fileID: 1258380074, guid: c586eebacc3455f4e955e3251b55ab23, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
