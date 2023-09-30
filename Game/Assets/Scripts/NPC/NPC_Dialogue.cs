@@ -6,10 +6,20 @@ public class NPC_Dialogue : MonoBehaviour
 {
     public float dialogueRange;
     public LayerMask playerMask;
+
+    private bool playerHit;
+    public DialogueSettings dialogue;
+    private List<string> sentences = new List<string>();
     
     void Start()
     {
-        
+        GetNPCInfo();
+    }
+
+    private void Update() {
+        if(Input.GetKeyDown(KeyCode.E) && playerHit){
+            DialogueController.instance.Speech(sentences.ToArray());
+        }
     }
 
     void FixedUpdate()
@@ -17,10 +27,21 @@ public class NPC_Dialogue : MonoBehaviour
         ShowDialogue();
     }
 
+    public void GetNPCInfo(){
+        for(int i = 0; i < dialogue.dialogues.Count; i ++){
+            sentences.Add(dialogue.dialogues[i].sentence.portuguese);
+        }
+    }
+
     public void ShowDialogue(){
         Collider2D hit = Physics2D.OverlapCircle(transform.position, dialogueRange, playerMask);
         if(hit){
-            Debug.Log("Colidiu pai");
+            
+            playerHit = true;
+        }
+        else{
+            playerHit = false;
+            DialogueController.instance.dialogueBox.SetActive(false);
         }
     }
 

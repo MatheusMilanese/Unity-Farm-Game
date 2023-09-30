@@ -14,7 +14,7 @@ public class DialogueSettings : ScriptableObject
     public string sentece;
 
 
-    public List<Senteces> dialogue = new List<Senteces>();
+    public List<Senteces> dialogues = new List<Senteces>();
 }
 
 [System.Serializable]
@@ -49,7 +49,7 @@ public class BuilderEditor : Editor {
 
         if(GUILayout.Button("Create Dialogue")){
             if(ds.sentece != ""){
-                ds.dialogue.Add(s);
+                ds.dialogues.Add(s);
                 ds.speakerSprite = null;
                 ds.sentece = "";
             }

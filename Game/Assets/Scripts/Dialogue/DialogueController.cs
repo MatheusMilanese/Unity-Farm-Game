@@ -4,13 +4,13 @@ using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class DialogueControll : MonoBehaviour
+public class DialogueController : MonoBehaviour
 {
     [Header("Components")]
     public GameObject dialogueBox;
     public Image speakerSprite;
-    public TextMeshPro speechText;
-    public TextMeshPro actorNameText;
+    public TextMeshProUGUI speechText;
+    public TextMeshProUGUI actorNameText;
 
     [Header("Settings")]
     public float textSpeed;
@@ -19,6 +19,12 @@ public class DialogueControll : MonoBehaviour
     private bool _isShowing;
     private int _index;
     private string[] _sentences;
+
+    public static DialogueController instance;
+
+    private void Awake() {
+        instance = this;
+    }
 
     void Start()
     {
