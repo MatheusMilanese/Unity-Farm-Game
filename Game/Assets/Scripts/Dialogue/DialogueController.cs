@@ -6,6 +6,15 @@ using UnityEngine.UI;
 
 public class DialogueController : MonoBehaviour
 {
+    [System.Serializable]
+    public enum idiom {
+        pt,
+        eng,
+        spa
+    }
+
+    public idiom language;
+
     [Header("Components")]
     public GameObject dialogueBox;
     public Image speakerSprite;
@@ -44,7 +53,20 @@ public class DialogueController : MonoBehaviour
     }
 
     public void NextSentence(){
-
+        if(speechText.text == _sentences[_index]){
+            if(_index < _sentences.Length-1){
+                _index++;
+                speechText.text = "";
+                StartCoroutine(TypeSentence());
+            }
+            else{
+                speechText.text = "";
+                _sentences = null;
+                _index = 0;
+                dialogueBox.SetActive(false);
+                _isShowing = false;
+            }
+        }
     }
 
     public void Speech(string[] txt){

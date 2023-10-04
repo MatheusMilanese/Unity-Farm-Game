@@ -33818,7 +33818,7 @@ MonoBehaviour:
   playerMask:
     serializedVersion: 2
     m_Bits: 64
-  dialogue: {fileID: 0}
+  dialogue: {fileID: 11400000, guid: d71b0a6735e39aa4a9f7549d7a5d88f6, type: 2}
 --- !u!1 &583806913
 GameObject:
   m_ObjectHideFlags: 0
@@ -41204,8 +41204,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 47.6916, y: 4.9081}
-  m_SizeDelta: {x: 1667.7122, y: 258.23}
+  m_AnchoredPosition: {x: 47.008, y: -1.071}
+  m_SizeDelta: {x: 1671.2, y: 227.2943}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1001 &3542931577184271801
 PrefabInstance:
