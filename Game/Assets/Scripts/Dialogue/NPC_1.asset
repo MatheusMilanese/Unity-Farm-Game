@@ -17,8 +17,14 @@ MonoBehaviour:
   sentece: 
   dialogues:
   - actorName: 
-    profile: {fileID: 21300000, guid: acfc1c6df644f194c96c520245b98397, type: 3}
+    profile: {fileID: 0}
     sentence:
-      portuguese: "Ol\xE1, voc\xEA n\xE3o me parece daqui... \xE9 novo na cidade?"
-      english: 
-      spanish: 
+      portuguese: "Ol\xE1"
+      english: Hello
+      spanish: Hola
+  - actorName: 
+    profile: {fileID: 0}
+    sentence:
+      portuguese: Tudo bem?
+      english: How are you?
+      spanish: Que passas manito?
