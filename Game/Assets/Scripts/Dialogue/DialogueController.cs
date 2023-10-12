@@ -25,7 +25,7 @@ public class DialogueController : MonoBehaviour
     public float textSpeed;
 
     //Variáveis de controle
-    private bool _isShowing;
+    public bool isShowing;
     private int _index;
     private string[] _sentences;
 
@@ -64,17 +64,17 @@ public class DialogueController : MonoBehaviour
                 _sentences = null;
                 _index = 0;
                 dialogueBox.SetActive(false);
-                _isShowing = false;
+                isShowing = false;
             }
         }
     }
 
     public void Speech(string[] txt){
-        if(!_isShowing){
+        if(!isShowing){
             dialogueBox.SetActive(true);
             _sentences = txt;
             StartCoroutine(TypeSentence());
-            _isShowing = true;
+            isShowing = true;
         }
     }
 }
