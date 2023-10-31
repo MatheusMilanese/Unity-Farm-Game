@@ -11,12 +11,14 @@ public class Player : MonoBehaviour
 
     private bool _isRolling;
     private bool _isRunning;
+    private bool _isCutting;
     private float _initialSpeed;
     private Vector2 _direction;
 
     public Vector2 direction { get => _direction; }
     public bool isRunning { get => _isRunning; }
     public bool isRolling { get => _isRolling; }
+    public bool isCutting { get => _isCutting; }
 
     private void Start() {
         rBody = GetComponent<Rigidbody2D>();
@@ -26,7 +28,8 @@ public class Player : MonoBehaviour
     private void Update() {
         OnInput();
         OnRun();
-        onRoll();
+        OnRoll();
+        OnCutting();
     }
 
     private void FixedUpdate() {
@@ -54,12 +57,23 @@ public class Player : MonoBehaviour
         }
     }
 
-    void onRoll(){
+    void OnRoll(){
         if(Input.GetMouseButtonDown(1)){
             _isRolling = true;
         }
         if(Input.GetMouseButtonUp(1)){
             _isRolling = false;
+        }
+    }
+
+    void OnCutting(){
+        if(Input.GetMouseButtonDown(0)){
+            _isCutting = true;
+            speed = 0f;
+        }
+        if(Input.GetMouseButtonUp(0)){
+            _isCutting = false;
+            speed = _initialSpeed;
         }
     }
 

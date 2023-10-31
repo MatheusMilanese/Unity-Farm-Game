@@ -17,9 +17,16 @@ public class PlayerAnim : MonoBehaviour
     {
         OnMove();
         OnRun();
+        OnCutting();
     }
 
     #region Movement
+
+    void OnCutting(){
+        if(player.isCutting){
+            animator.SetInteger("transition", 3);
+        }
+    }
 
     void OnMove(){
         if(player.direction.sqrMagnitude > 0) {
