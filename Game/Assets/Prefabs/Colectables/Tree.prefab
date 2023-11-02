@@ -233,7 +233,7 @@ Rigidbody2D:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4424905105959504467}
-  m_BodyType: 0
+  m_BodyType: 1
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
@@ -285,4 +285,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   anim: {fileID: 4424905105959504466}
-  healthTree: 5
+  healthTree: 3
+  woodPrefab: {fileID: 4602393403716661255, guid: a1360a9de2ca3954ca08adb8d9abdd58, type: 3}
+  totalWood: 3
