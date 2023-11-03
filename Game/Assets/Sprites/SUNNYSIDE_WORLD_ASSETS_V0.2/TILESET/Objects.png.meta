@@ -445,9 +445,9 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 19
-        y: 853
-        width: 25
-        height: 7
+        y: 854
+        width: 10
+        height: 4
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1679,6 +1679,27 @@ TextureImporter:
       indices: 
       edges: []
       weights: []
+    - serializedVersion: 2
+      name: Objects_75
+      rect:
+        serializedVersion: 2
+        x: 36
+        y: 853
+        width: 8
+        height: 7
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 24e0f6b5666ddc44989d500cded7bc7d
+      internalID: 1604196661
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []
@@ -1702,6 +1723,7 @@ TextureImporter:
       Objects_65: -302363144
       Objects_51: 670461502
       Objects_70: -198645936
+      Objects_76: 1869693149
       Objects_55: 320775104
       Objects_64: -1463180638
       Objects_68: 989188566
@@ -1729,6 +1751,7 @@ TextureImporter:
       Objects_10: 143071867
       Objects_22: -509816077
       Objects_43: -2051751660
+      Objects_75: 1604196661
       Objects_61: -1708797741
       Objects_30: 643897125
       Objects_3: -1617158519
