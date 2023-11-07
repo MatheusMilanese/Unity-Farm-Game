@@ -9,9 +9,12 @@ public class Player : MonoBehaviour
     
     private Rigidbody2D rBody;
 
+    private int handlingObj;
+
     private bool _isRolling;
     private bool _isRunning;
     private bool _isCutting;
+    private bool _isDigging;
     private float _initialSpeed;
     private Vector2 _direction;
 
@@ -19,6 +22,7 @@ public class Player : MonoBehaviour
     public bool isRunning { get => _isRunning; }
     public bool isRolling { get => _isRolling; }
     public bool isCutting { get => _isCutting; }
+    public bool isDigging { get => _isDigging; }
 
     private void Start() {
         rBody = GetComponent<Rigidbody2D>();
@@ -29,7 +33,10 @@ public class Player : MonoBehaviour
         OnInput();
         OnRun();
         OnRoll();
+
+        OnInputTools();
         OnCutting();
+        OnDigging();
     }
 
     private void FixedUpdate() {
@@ -68,13 +75,35 @@ public class Player : MonoBehaviour
         }
     }
 
+    #endregion
+
+    #region farming
+
+    void OnInputTools(){
+        if(Input.GetKeyDown(KeyCode.Alpha1)) handlingObj = 0;
+        else if(Input.GetKeyDown(KeyCode.Alpha2)) handlingObj = 1;
+    }
+
     void OnCutting(){
+        if(handlingObj != 0) return;
         if(Input.GetMouseButtonDown(0)){
             _isCutting = true;
             speed = 0f;
         }
         if(Input.GetMouseButtonUp(0)){
             _isCutting = false;
+            speed = _initialSpeed;
+        }
+    }
+
+    void OnDigging(){
+        if(handlingObj != 1) return;
+        if(Input.GetMouseButtonDown(0)){
+            _isDigging = true;
+            speed = 0f;
+        }
+        if(Input.GetMouseButtonUp(0)){
+            _isDigging = false;
             speed = _initialSpeed;
         }
     }

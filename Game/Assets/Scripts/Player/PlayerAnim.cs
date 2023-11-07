@@ -18,15 +18,10 @@ public class PlayerAnim : MonoBehaviour
         OnMove();
         OnRun();
         OnCutting();
+        OnDigging();
     }
 
     #region Movement
-
-    void OnCutting(){
-        if(player.isCutting){
-            animator.SetInteger("transition", 3);
-        }
-    }
 
     void OnMove(){
         if(player.direction.sqrMagnitude > 0) {
@@ -55,5 +50,20 @@ public class PlayerAnim : MonoBehaviour
         }
     }
 
+    #endregion
+
+    #region farming
+    
+    void OnCutting(){
+        if(player.isCutting){
+            animator.SetInteger("transition", 3);
+        }
+    }
+
+    void OnDigging(){
+        if(player.isDigging){
+            animator.SetInteger("transition", 4);
+        }
+    }
     #endregion
 }

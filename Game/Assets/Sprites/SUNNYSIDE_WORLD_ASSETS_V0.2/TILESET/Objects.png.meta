@@ -1559,7 +1559,7 @@ TextureImporter:
         serializedVersion: 2
         x: 16
         y: 576
-        width: 32
+        width: 16
         height: 16
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
@@ -1696,6 +1696,27 @@ TextureImporter:
       bones: []
       spriteID: 24e0f6b5666ddc44989d500cded7bc7d
       internalID: 1604196661
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Objects_76
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 576
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0479481f8be35cd4980fcac61bbbf2f2
+      internalID: 1869693149
       vertices: []
       indices: 
       edges: []
