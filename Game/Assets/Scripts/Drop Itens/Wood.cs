@@ -19,7 +19,7 @@ public class Wood : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D other) {
         if(other.gameObject.CompareTag("Player")){
-            other.GetComponent<PlayerItens>().totalWood++;
+            other.GetComponent<PlayerItens>().TotalWood++;
             Destroy(gameObject);
         }
     }

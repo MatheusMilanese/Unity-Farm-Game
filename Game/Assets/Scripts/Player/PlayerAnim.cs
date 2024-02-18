@@ -19,13 +19,14 @@ public class PlayerAnim : MonoBehaviour
         OnRun();
         OnCutting();
         OnDigging();
+        OnWatering();
     }
 
     #region Movement
 
     void OnMove(){
-        if(player.direction.sqrMagnitude > 0) {
-            if(player.isRolling){
+        if(player.Direction.sqrMagnitude > 0) {
+            if(player.IsRolling){
                 animator.SetTrigger("isRoll");
             }
             else{
@@ -36,16 +37,16 @@ public class PlayerAnim : MonoBehaviour
             animator.SetInteger("transition", 0);
         }
 
-        if(player.direction.x > 0){
+        if(player.Direction.x > 0){
             transform.eulerAngles = new Vector2(0, 0);
         }
-        else if(player.direction.x < 0){
+        else if(player.Direction.x < 0){
             transform.eulerAngles = new Vector2(0, 180);
         }
     }
 
     void OnRun(){
-        if(player.isRunning){
+        if(player.IsRunning){
             animator.SetInteger("transition", 2);
         }
     }
@@ -55,14 +56,20 @@ public class PlayerAnim : MonoBehaviour
     #region farming
     
     void OnCutting(){
-        if(player.isCutting){
+        if(player.IsCutting){
             animator.SetInteger("transition", 3);
         }
     }
 
     void OnDigging(){
-        if(player.isDigging){
+        if(player.IsDigging){
             animator.SetInteger("transition", 4);
+        }
+    }
+
+    void OnWatering(){
+        if(player.IsWatering){
+            animator.SetInteger("transition", 5);
         }
     }
     #endregion
