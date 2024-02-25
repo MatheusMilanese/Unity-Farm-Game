@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class Player : MonoBehaviour
 {
+    public bool isPaused;
+
     [SerializeField] private float speed;
     [SerializeField] private float runSpeed;
     
@@ -37,6 +39,8 @@ public class Player : MonoBehaviour
     }
 
     private void Update() {
+        if(isPaused) return;
+
         OnInput();
         OnRun();
         OnRoll();
@@ -48,6 +52,8 @@ public class Player : MonoBehaviour
     }
 
     private void FixedUpdate() {
+        if(isPaused) return;
+
         OnMove();
     }
 
