@@ -28,6 +28,8 @@ public class Player : MonoBehaviour
     public bool IsDigging { get => isDigging; }
     public bool IsWatering { get => isWatering; }
 
+    public int HandlingObj { get => handlingObj; }
+
     private void Start() {
         rBody = GetComponent<Rigidbody2D>();
         playerItens = GetComponent<PlayerItens>();

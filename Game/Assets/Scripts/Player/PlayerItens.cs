@@ -4,12 +4,16 @@ using UnityEngine;
 
 public class PlayerItens : MonoBehaviour
 {
-    [SerializeField] private int totalWood;
+    [SerializeField] private float totalWood;
+    [SerializeField] private float totalCarrots;
     [SerializeField] private float currentWater;
 
-    private readonly float waterLimit = 50;
+    public readonly float waterLimit = 50;
+    public readonly float woodLimit = 5;
+    public readonly float carrotLimit = 10;
 
-    public int TotalWood { get => totalWood; set => totalWood = value; }
+    public float TotalWood { get => totalWood; set => totalWood = value; }
+    public float TotalCarrots { get => totalCarrots; set => totalCarrots = value; }
     public float CurrentWater { get => currentWater; }
 
     public void AddWater(float waterAmount){
