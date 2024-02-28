@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Water : MonoBehaviour
 {
-    [SerializeField] private bool detectingPlayer;
+    private bool detectingPlayer;
     private PlayerItens playerItens;
     private readonly int waterValue = 5;
 

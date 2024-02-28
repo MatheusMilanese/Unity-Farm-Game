@@ -84,5 +84,13 @@ public class PlayerAnim : MonoBehaviour
         fishing.OnCasting();
         player.isPaused = false;
     }
+
+    public void OnHammeringStart(){
+        animator.SetBool("isHammering", true);
+    }
+
+    public void OnHammeringEnd(){
+        animator.SetBool("isHammering", false);
+    }
     #endregion
 }
